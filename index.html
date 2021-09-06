@@ -14,30 +14,40 @@
         <div class="app_container">
             <header class="head">
                 <h1>Todo</h1>
-                <img src="./images/icon-sun.svg" />
+                <img src="./images/icon-moon.svg" id="toggle-icon" />
             </header>
-            <form class="todo_add_form">
+            <form id="todo_add_form">
                 <div class="circle"></div>
                 <input class="todo_input" type="text" placeholder="Create a new todo..." />
             </form>
             <ul class="todos">
                 <li>
                     <div class="circle"></div>
-                    <span class="todo_text"></span
+                    <span class="todo_text">Pick the trash</span
+                    ><a href="#" class="todo_delete"><img src="./images/icon-cross.svg" /></a>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <span class="todo_text">Pick the trash</span
+                    ><a href="#" class="todo_delete"><img src="./images/icon-cross.svg" /></a>
+                </li>
+                <li>
+                    <div class="circle"></div>
+                    <span class="todo_text">Pick the trash</span
                     ><a href="#" class="todo_delete"><img src="./images/icon-cross.svg" /></a>
                 </li>
             </ul>
             <div class="todo_footer">
-                <div><span class="todo_count"></span> items left</div>
+                <div><span class="todo_count"></span>5 items left</div>
                 <div>
                     <a href="#">All</a>
                     <a href="#">Active</a>
                     <a href="#">Completed</a>
                 </div>
-                <div>Clear Completed</div>
+                <a>Clear Completed</a>
             </div>
+            <div class="footer_text">Drag and drop to reorder list</div>
         </div>
-        <div>Drag and drop to reorder list</div>
 
         <script src="./main.js"></script>
     </body>

@@ -1,4 +1,167 @@
+/* ?        BASE         */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 :root {
-    --color-light-blue: hsl(220, 98%, 61%);
+    --color-primary: hsl(220, 98%, 61%);
     --color-blue-grad: linear-gradient(to bottom, hsl(192, 100%, 67%) 50%, hsl(280, 87%, 65%) 49%);
+
+    --color-secondary-1: hsl(0, 0%, 98%);
+    --color-secondary-2: hsl(235, 19%, 35%);
+    --color-secondary-3: hsl(236, 9%, 61%);
+    --color-secondary-4: hsl(236, 33%, 92%);
+    --color-secondary-5: hsl(233, 11%, 84%);
+}
+
+html {
+    font-size: 18px;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-image: url("./images/bg-desktop-light.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100vw 50vh;
+    background-color: var(--color-secondary-4);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* ?    CONTAINER    */
+.app_container {
+    width: 80%;
+    max-width: 650px;
+    margin: 10vh auto 0;
+}
+
+/* ?    HEADER   */
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head h1 {
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: var(--color-secondary-1);
+}
+
+form {
+    margin-top: 2rem;
+    background-color: var(--color-secondary-1);
+    padding: 1rem;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.circle {
+    border: 1px solid var(--color-secondary-5);
+    display: inline-block;
+    margin-right: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.todo_input {
+    border: none;
+    outline: none;
+    font-size: 0.85rem;
+    color: var(--color-secondary-2);
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.todo_text {
+    display: inline-block;
+}
+
+.todos {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--color-secondary-1);
+    margin-top: 1.5rem;
+    box-shadow: 0px 0px 3px var(--color-secondary-5);
+}
+
+.todos li {
+    display: block;
+    padding: 0.7rem;
+    border: none;
+    border-bottom: 1px solid var(--color-secondary-5);
+}
+
+.todos li:hover {
+    cursor: pointer;
+}
+
+.todos li:hover .todo_delete {
+    display: block;
+}
+
+.todos li:hover .circle {
+    border-color: var(--color-secondary-2);
+}
+
+.todo_delete {
+    display: none;
+    float: right;
+    color: var(--color-secondary-4);
+}
+
+.todo_delete img {
+    width: 16px;
+}
+
+.todo_footer {
+    background-color: var(--color-secondary-1);
+    border: none;
+    border-radius: 0 3px 0;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--color-secondary-5);
+    font-weight: 700;
+    box-shadow: 0px 13px 8px -3px var(--color-secondary-5);
+}
+
+.todo_footer > a {
+    color: var(--color-secondary-5);
+}
+
+.todo_footer > a:hover {
+    color: var(--color-secondary-3);
+}
+
+.todo_footer > div:nth-child(2) > a {
+    padding-left: 0.7rem;
+    color: var(--color-secondary-3);
+}
+
+.todo_footer > div:nth-child(2) > a:hover {
+    color: var(--color-primary);
+}
+
+.footer_text {
+    text-align: center;
+    color: var(--color-secondary-3);
+    margin-top: 3rem;
+    font-size: 0.8rem;
 }
