@@ -1,0 +1,4 @@
+:root {
+    --color-light-blue: hsl(220, 98%, 61%);
+    --color-blue-grad: linear-gradient(to bottom, hsl(192, 100%, 67%) 50%, hsl(280, 87%, 65%) 49%);
+}
