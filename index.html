@@ -10,29 +10,29 @@
         <title>Frontend Mentor | Todo app</title>
         <link rel="stylesheet" href="./styles.css" />
     </head>
-    <body>
+    <body class="mobile">
         <div class="app_container">
             <header class="head">
                 <h1>Todo</h1>
                 <img src="./images/icon-moon.svg" id="toggle-icon" />
             </header>
             <form id="todo_add_form">
-                <div class="circle"></div>
+                <div class="circle-wrap"><div class="circle"></div></div>
                 <input class="todo_input" type="text" placeholder="Create a new todo..." />
             </form>
             <ul class="todos">
                 <li>
-                    <div class="circle"></div>
+                    <div class="circle-wrap"><div class="circle"></div></div>
                     <span class="todo_text">Pick the trash</span
                     ><a href="#" class="todo_delete"><img src="./images/icon-cross.svg" /></a>
                 </li>
                 <li>
-                    <div class="circle"></div>
+                    <div class="circle-wrap"><div class="circle"></div></div>
                     <span class="todo_text">Pick the trash</span
                     ><a href="#" class="todo_delete"><img src="./images/icon-cross.svg" /></a>
                 </li>
                 <li>
-                    <div class="circle"></div>
+                    <div class="circle-wrap"><div class="circle"></div></div>
                     <span class="todo_text">Pick the trash</span
                     ><a href="#" class="todo_delete"><img src="./images/icon-cross.svg" /></a>
                 </li>
@@ -40,7 +40,7 @@
             <div class="todo_footer">
                 <div><span class="todo_count"></span>5 items left</div>
                 <div>
-                    <a href="#">All</a>
+                    <a class="active" href="#">All</a>
                     <a href="#">Active</a>
                     <a href="#">Completed</a>
                 </div>
