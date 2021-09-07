@@ -84,6 +84,10 @@ a:hover {
     color: #fff;
 }
 
+#toggle-icon {
+    cursor: pointer;
+}
+
 form {
     margin-top: 2rem;
     background-color: var(--color-secondary-1);
@@ -108,7 +112,13 @@ form {
     border-radius: 50%;
 }
 
-
+.text-center {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--color-secondary-3);
+}
 
 .todo_input {
     border: none;
@@ -174,10 +184,11 @@ form {
 .todo_footer {
     background-color: var(--color-secondary-1);
     border: none;
-    border-radius: 0 3px 0;
+    border-radius: 0 0 5px 5px;
     padding: 0.7rem;
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid var(--color-secondary-5);
     font-size: 0.7rem;
     color: var(--color-secondary-5);
     font-weight: 700;
@@ -206,6 +217,7 @@ form {
 }
 
 .footer_text {
+    display: block;
     text-align: center;
     color: var(--color-secondary-3);
     margin-top: 2rem;
