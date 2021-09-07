@@ -68,28 +68,32 @@ function createTodo(text) {
 function fillTodoList() {
     todos = JSON.parse(localStorage.getItem("todos") || "[]")
     todoList.innerHTML = ""
-    todos.forEach((item) => {
-        console.log(item)
-        let todo = document.createElement("li"),
-            circle_wrap = document.createElement("div"),
-            circle = document.createElement("div"),
-            todoText = document.createElement("span"),
-            delete_link = document.createElement("a"),
-            delete_icon = document.createElement("img")
-        delete_link.setAttribute("href", "#")
-        delete_link.setAttribute("class", "todo_delete")
-        delete_icon.setAttribute("src", "./images/icon-cross.svg")
-        circle.setAttribute("class", "circle")
-        circle_wrap.setAttribute("class", "circle-wrap")
-        todoText.setAttribute("class", "todo_text")
-        todoText.innerHTML = item.text
-        delete_link.append(delete_icon)
-        circle_wrap.append(circle)
-        todo.append(circle_wrap)
-        todo.append(todoText)
-        todo.append(delete_link)
-        todoList.append(todo)
-    })
+    if (todos.length == 0) {
+        todoList.innerHTML = "<h1 class='text-center'> Todo list is empty</h1>"
+    } else {
+        todos.forEach((item) => {
+            console.log(item)
+            let todo = document.createElement("li"),
+                circle_wrap = document.createElement("div"),
+                circle = document.createElement("div"),
+                todoText = document.createElement("span"),
+                delete_link = document.createElement("a"),
+                delete_icon = document.createElement("img")
+            delete_link.setAttribute("href", "#")
+            delete_link.setAttribute("class", "todo_delete")
+            delete_icon.setAttribute("src", "./images/icon-cross.svg")
+            circle.setAttribute("class", "circle")
+            circle_wrap.setAttribute("class", "circle-wrap")
+            todoText.setAttribute("class", "todo_text")
+            todoText.innerHTML = item.text
+            delete_link.append(delete_icon)
+            circle_wrap.append(circle)
+            todo.append(circle_wrap)
+            todo.append(todoText)
+            todo.append(delete_link)
+            todoList.append(todo)
+        })
+    }
 }
 
 fillTodoList()
