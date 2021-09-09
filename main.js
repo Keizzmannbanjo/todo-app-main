@@ -11,7 +11,7 @@ let todos = JSON.parse(localStorage.getItem("todos") || "[]")
 
 // ?    Retrieves ID count of todos
 let idCount = JSON.parse(localStorage.getItem("count") || "0")
-
+ 
 // ?    EVENTS LISTENERS HERE
 
 // ? Handles todo form submission
