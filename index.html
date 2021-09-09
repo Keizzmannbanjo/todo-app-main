@@ -18,22 +18,21 @@
             </header>
 
             <form id="todo_add_form">
-                <div class="circle-wrap"><div class="circle"></div></div>
+                <label class="circle-wrap"><div class="circle"></div></label>
                 <input class="todo_input" type="text" placeholder="Create a new todo..." />
             </form>
             <ul class="todos"></ul>
             <div class="todo_footer">
-                <div><span class="todo_count"></span>5 items left</div>
-                <div>
-                    <a class="active" href="#">All</a>
-                    <a href="#">Active</a>
-                    <a href="#">Completed</a>
+                <div><span class="todo_count"></span></div>
+                <div id="footer_links">
+                    <a class="active" data-action="all" href="#">All</a>
+                    <a data-action="active" href="#">Active</a>
+                    <a data-action="completed" href="#">Completed</a>
                 </div>
-                <a>Clear Completed</a>
+                <a id="clear-completed">Clear Completed</a>
             </div>
-            <div class="footer_text">Drag and drop to reorder list</div>
+            <!-- <div class="footer_text">Drag and drop to reorder list</div> -->
         </div>
-
         <script src="./main.js"></script>
     </body>
 </html>

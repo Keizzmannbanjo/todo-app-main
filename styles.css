@@ -107,7 +107,6 @@ form {
 }
 
 .circle {
-    margin: 1px;
     padding: 0.5rem;
     border-radius: 50%;
 }
@@ -161,11 +160,13 @@ form {
     background-image: var(--color-blue-grad);
     z-index: 1;
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .todos li .circle-wrap:hover .circle {
     background-color: #fff;
     z-index: 999;
+    cursor: pointer;
 }
 
 .dark_mode .todos li .circle-wrap:hover .circle {
@@ -214,6 +215,18 @@ form {
 
 .todo_footer > div:nth-child(2) > a.active {
     color: var(--color-primary);
+}
+
+@media screen and (max-width: 750px) {
+    .todo_footer {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .todo_footer div,
+    .todo_footer > a {
+        margin-top: 0.5rem;
+    }
 }
 
 .footer_text {
